@@ -11,6 +11,9 @@
         {% csrf_token %}
         <input type="file" name="sent_pdf_name" id="sent_pdf_id">
         <button type="submit">Visualizar</button>
+        {% if pdf_url %}
+            <iframe src="{% pdf_url %}" width="600" height="400" title="PDF"></iframe>
+        {% endif %}
     </form>
 </body>
 </html>
